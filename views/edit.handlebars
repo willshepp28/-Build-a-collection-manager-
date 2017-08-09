@@ -1,0 +1,33 @@
+<div class="container">
+
+{{#cars}}
+<h2>Edit The {{brand}} {{name}}</h2>
+    <form action="/edit/{{id}}" method="post">
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" required="true" placeholder="add name" value="{{name}}"><br><br>
+
+        <label for="name">Brand:</label>
+        <input type="text" name="brand" required="true" placeholder="add brand" value="{{brand}}"><br><br>
+
+        <label for="name">Engine Horsepower:</label>
+        <input type="text" name="engineHp" required="true" placeholder="add engine horsepower" value="{{engine.0.engineHp}}"><br><br>
+        <label for="name">Cylinder:</label>
+        <input type="text" name="cylinder" required="true" placeholder="add engine cylinders" value="{{engine.0.cyclinder}}"><br><br>
+
+        <label for="name">Wheels:</label>
+        <input type="text" name="wheels" required="true" placeholder="add amount of wheels" value="{{wheels}}"><br><br>
+        
+        <label for="name">Image:</label>
+        <input type="text" name="carPath" required="true" placeholder="add a image for this car" value="{{carPath}}"><br><br>
+
+        <label for="name">Mpg:</label>
+        <input type="text" name="mpg" required="true" placeholder="add info on miles per gallon" value="{{fuel.0.mpg}}"><br><br>
+        <label for="name">Fuel Compacity:</label>
+         <input type="text" name="fuelCompacity" required="true" placeholder="add fuel compacity" value="{{fuel.0.fuelCompacity}}"><br><br>
+
+
+        <button type="submit">Submit</button>
+    </form>
+    {{/cars}}
+</div>

@@ -1,0 +1,34 @@
+
+
+
+<div class="container">
+
+
+{{#if cars}}
+
+        
+    {{#each cars}}
+        <div class="cars">
+           
+            <h1>{{name}}</h1>
+            <img src="{{carPath}}" alt="{{name}}">
+            <p>Brand: {{brand}}</p>
+            <p>Wheels: {{wheels}}</p>
+            <p>Engine Path: {{engine.0.engineHp}}</p>
+            <p>Cylinders: {{engine.1.cylinders}}</p>
+            <p>MPG : {{fuel.0.mpg}}</p>
+            <p>Fuel Compacity : {{fuel.0.fuelCompacity}}</p>
+        </div>
+
+    <div class="form-container">
+        <form action="/delete/{{name}}" method="post"><button type="submit" class="red">Delete</button></form>
+         <form action="/edit/{{name}}"><button type="submit">Edit</button></form> 
+    </div>
+    {{/each}}
+    {{else}}
+    <p>No cars to show</p>
+{{/if}}
+
+
+
+</div>
